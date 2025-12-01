@@ -1,0 +1,10 @@
+E:\Rust_bootcamp\rust_bootcamp\rust_00\target\debug\deps\anstyle_wincon-679af0f4ee2ab0bf.d: C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\lib.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\ansi.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\stream.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\windows.rs
+
+E:\Rust_bootcamp\rust_bootcamp\rust_00\target\debug\deps\libanstyle_wincon-679af0f4ee2ab0bf.rlib: C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\lib.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\ansi.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\stream.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\windows.rs
+
+E:\Rust_bootcamp\rust_bootcamp\rust_00\target\debug\deps\libanstyle_wincon-679af0f4ee2ab0bf.rmeta: C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\lib.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\ansi.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\stream.rs C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\windows.rs
+
+C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\ansi.rs:
+C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\stream.rs:
+C:\Users\Administrator\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\anstyle-wincon-3.0.10\src\windows.rs:
