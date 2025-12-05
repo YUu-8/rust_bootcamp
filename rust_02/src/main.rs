@@ -108,7 +108,7 @@ fn main() -> io::Result<()> {
         println!();
         print!("ASCII:");
         for &byte in &bytes {
-            if byte >= 0x20 && byte <= 0x7e {
+            if (0x20..=0x7e).contains(&byte) {
                 print!("{}", byte as char);
             } else {
                 print!(".");

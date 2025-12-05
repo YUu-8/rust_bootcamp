@@ -16,18 +16,18 @@ struct CliArgs {
 }
 fn main() {
     let args = CliArgs::parse();
-    
+
     // default name is "world" if not provided
     let name = args.name.unwrap_or_else(|| "world".to_string());
-    
+
     // generate greeting message
     let mut greeting = format!("Hello, {}!", name);
-    
+
     // dealing with uppercase option
     if args.upper {
         greeting = greeting.to_uppercase();
     }
-    
+
     // dealing with repeat option
     for _ in 0..args.repeat {
         println!("{}", greeting);

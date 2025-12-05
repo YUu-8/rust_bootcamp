@@ -18,43 +18,43 @@ struct CliArgs {
     #[clap(long)]
     ignore_case: bool,
 }
+use regex::Regex;
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::{self, Read};
-use regex::Regex;
 use std::path::Path;
 
 fn main() -> io::Result<()> {
     let args = CliArgs::parse();
 
     // read input text
-let content = if let Some(input) = &args.text {
-    if Path::new(input).exists() {
-        let mut file = match File::open(input) {
-            Ok(f) => f,
-            Err(e) => {
-                eprintln!("Error opening file {}: {}", input, e);
-                std::process::exit(1); 
+    let content = if let Some(input) = &args.text {
+        if Path::new(input).exists() {
+            let mut file = match File::open(input) {
+                Ok(f) => f,
+                Err(e) => {
+                    eprintln!("Error opening file {}: {}", input, e);
+                    std::process::exit(1);
+                }
+            };
+            let mut s = String::new();
+            if let Err(e) = file.read_to_string(&mut s) {
+                eprintln!("Error reading file {}: {}", input, e);
+                std::process::exit(1);
             }
-        };
+            s
+        } else {
+            input.clone()
+        }
+    } else {
+        let mut stdin = io::stdin();
         let mut s = String::new();
-        if let Err(e) = file.read_to_string(&mut s) {
-            eprintln!("Error reading file {}: {}", input, e);
-            std::process::exit(1); 
+        if let Err(e) = stdin.read_to_string(&mut s) {
+            eprintln!("Error reading from stdin: {}", e);
+            std::process::exit(1); // 错误退出
         }
         s
-    } else {
-        input.clone()
-    }
-} else {
-    let mut stdin = io::stdin();
-    let mut s = String::new();
-    if let Err(e) = stdin.read_to_string(&mut s) {
-        eprintln!("Error reading from stdin: {}", e);
-        std::process::exit(1); // 错误退出
-    }
-    s
-};
+    };
     // define regex to match words
     let re = Regex::new(r"\b\w+\b").unwrap();
 
@@ -63,11 +63,12 @@ let content = if let Some(input) = &args.text {
     for mat in re.find_iter(&content) {
         let word = mat.as_str();
         let word = if args.ignore_case {
-            word.to_lowercase()  // if ignore case, convert to lowercase
+            word.to_lowercase() // if ignore case, convert to lowercase
         } else {
             word.to_string()
         };
-        if word.len() >= args.min_length as usize {  // fliter by min_length
+        if word.len() >= args.min_length as usize {
+            // fliter by min_length
             *word_count.entry(word).or_insert(0) += 1;
         }
     }
